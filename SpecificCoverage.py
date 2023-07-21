@@ -55,5 +55,3 @@ plt.title("Freq vs. Latitude on the W 170°")
 plt.xlabel("Frequency")
 plt.ylabel("Latitude")
 plt.show()
-
-
