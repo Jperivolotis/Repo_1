@@ -13,12 +13,12 @@ trueAnomaly = 0;
 sat = satellite(sc,semiMajorAxis, eccentricity,inclination,rightAscensionOfAscendingNode,...   
          argumentOfPeriapsis, trueAnomaly, "OrbitPropagator", "two-body-keplerian", "Name", "Sat");
 g = gimbal(sat);
-camsensor = conicalSensor(g, MaxViewAngle=130);
+camsensor = conicalSensor(g, MaxViewAngle=140);
 
 v = satelliteScenarioViewer(sc, "Dimension", "2D");
 fieldOfView(camsensor);
 leadTime = 3600;                                         % seconds
-trailTime = 2*3600;
+trailTime = 5000;
 gt = groundTrack(sat,"LeadTime",leadTime,"TrailTime",trailTime);
 play(sc)
 
