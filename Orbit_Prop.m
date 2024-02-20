@@ -5,7 +5,7 @@ sc = satelliteScenario(startTime, stopTime, sampleTime);
 
 semiMajorAxis = 6779000;
 eccentricity = 0;
-inclination = 51.6;
+inclination = 90;
 rightAscensionOfAscendingNode = 0;
 argumentOfPeriapsis = 0;
 trueAnomaly = 0;
@@ -15,7 +15,7 @@ sat = satellite(sc,semiMajorAxis, eccentricity,inclination,rightAscensionOfAscen
 g = gimbal(sat);
 camsensor = conicalSensor(g, MaxViewAngle=140);
 
-v = satelliteScenarioViewer(sc, "Dimension", "3D");
+v = satelliteScenarioViewer(sc, "Dimension", "2D");
 fieldOfView(camsensor);
 leadTime = 3600;                                         % seconds
 trailTime = 5000;
